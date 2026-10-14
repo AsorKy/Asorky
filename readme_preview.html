@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asorky · README preview</title>
+<style>
+  :root {
+    --bg-canvas: #0a2027;
+    --bg-default: #0a2027;
+    --bg-overlay: #0d2831;
+    --border-default: #1f4a56;
+    --border-muted: #163840;
+    --fg-default: #f2ebdd;
+    --fg-muted: #8fb3bb;
+    --accent: #e8a33d;
+    --accent-teal: #45b8cb;
+    --code-bg: #0d2831;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg-canvas);
+    color: var(--fg-default);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .topbar {
+    border-bottom: 1px solid var(--border-default);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--fg-muted);
+    font-size: 14px;
+  }
+  .topbar .avatar {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: linear-gradient(135deg,#45b8cb,#d97a2b);
+    display: inline-block;
+  }
+  .topbar { border-bottom: 2px solid; border-image: linear-gradient(90deg,#45b8cb,#e8a33d,#d97a2b) 1; }
+  .topbar b { color: var(--fg-default); }
+  .wrapper {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 24px 64px;
+  }
+  .repo-card {
+    border: 1px solid var(--border-default);
+    border-radius: 6px;
+    background: var(--bg-overlay);
+    overflow: hidden;
+  }
+  .repo-card-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-default);
+    font-size: 13px;
+    color: var(--fg-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .repo-card-header b { color: var(--fg-default); font-weight: 600; }
+  .markdown-body { padding: 32px 40px; }
+
+  .markdown-body img { max-width: 100%; }
+  .markdown-body h2 {
+    border-bottom: 1px solid var(--border-muted);
+    padding-bottom: 8px;
+    margin-top: 28px;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: var(--accent-teal);
+  }
+  .markdown-body h2:first-of-type { margin-top: 0; }
+  .markdown-body a { color: var(--accent); text-decoration: none; }
+  .markdown-body a:hover { text-decoration: underline; }
+  .markdown-body ul { padding-left: 1.6em; }
+  .markdown-body li { margin: 4px 0; }
+  .markdown-body code {
+    background: rgba(110,118,129,0.2);
+    padding: 0.15em 0.4em;
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  .markdown-body pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border-default);
+    border-radius: 6px;
+    padding: 14px 16px;
+    overflow-x: auto;
+  }
+  .markdown-body pre code { background: none; padding: 0; }
+  .markdown-body em { color: var(--fg-muted); }
+  .markdown-body hr { border: none; border-top: 1px solid var(--border-muted); margin: 24px 0; }
+  .markdown-body > p:first-child { text-align: left; }
+  .markdown-body > p:first-child img { border-radius: 6px; }
+
+  .note {
+    max-width: 900px;
+    margin: 0 auto 16px;
+    padding: 10px 24px;
+    font-size: 13px;
+    color: var(--fg-muted);
+  }
+  .note code { color: var(--fg-default); }
+</style>
+</head>
+<body>
+
+<div class="topbar"><span class="avatar"></span> <b>Asorky</b> / <span>Asorky</span> &nbsp;·&nbsp; README preview (local, not live GitHub data)</div>
+
+<div class="note">This local mockup is styled in the teal/amber palette from your artwork — but github.com itself always renders README text in its own light/dark theme; it can't be recolored. The header gif and gallery image are what actually carry that look on the live page. Badges needing live data (visitors, metrics, activity) only populate once this is pushed as <code>Asorky/Asorky</code>.</div>
+
+<div class="wrapper">
+  <div class="repo-card">
+    <div class="repo-card-header">📄 &nbsp;<b>README.md</b></div>
+    <div class="markdown-body">
+<p><a href="https://github.com/Asorky"><img src="./assets/network_header.gif" alt="👋 Hi there! I'm Asorky" title="👋 Hi there! I'm Asorky"/></a></p>
+<p><img src="./assets/img3.jpg" alt="Network-themed gallery paintings" width="100%"/></p>
+<p><img alt="visitors" src="https://vbr.nathanchung.dev/badge?page_id=Asorky.Asorky&amp;color=00cf00" /></p>
+<p><em>Last manually updated:</em> <code>2026-10-13</code> <!-- TODO: automate this --></p>
+<!--
+**Asorky/Asorky** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+-->
+
+<h2>:book: About Me</h2>
+<ul>
+<li>🖥 AI/Data Engineer and physicist — production-oriented LLM systems, RAG, and agentic AI</li>
+<li>💼 AI/Data Engineer at <strong>Arrive Logistics</strong>, working on analytics and data engineering</li>
+<li>💜 Founder &amp; lead of <a href="https://github.com/PlanALabs"><strong>Plan A Labs</strong></a>, an open-source developer team</li>
+<li>🎓 Master's in AI from Universidad de los Andes · 5 years of experience in data science and analytics</li>
+<li>🧪 Background in Complex Network Science for system modeling, and in designing knowledge ontologies</li>
+<li>🏫 Designer and instructor of university-level AI and data science courses</li>
+<li>🎧 btw I also DJ — <em>"DJ y coder"</em></li>
+</ul>
+<h2>⬆ What I'm up to</h2>
+<ul>
+<li>🔨 I'm currently...</li>
+</ul>
+<pre><code class="language-yaml">- Building agentic AI systems and RAG pipelines (document intelligence: OCR + LLM extraction)
+- Leading Plan A Labs, an open-source developer team
+- Designing cloud-native and local-first workflows combining ETL, LLM data extraction, agents and RAG with enterprise data platforms (Oracle, Azure, AWS, Power BI)
+</code></pre>
+<ul>
+<li>🌱 I'm currently learning...
+  <ul><li>Agentic AI patterns and Model Context Protocol (MCP) in depth</li></ul>
+</li>
+<li>👯 I'm looking to collaborate on...
+  <ul><li>RAG / document intelligence tooling, agentic systems, MCP servers</li></ul>
+</li>
+<li>💬 Ask me about...
+  <ul><li>LLM applications, RAG, agents, MCP, data pipelines, Complex Networks</li></ul>
+</li>
+<li>😄 Pronouns: he/him</li>
+</ul>
+<h2>🛠️ Tech Stack</h2>
+<p><strong>Languages:</strong> Python · SQL · DAX</p>
+<p><strong>LLM &amp; Agent Stack:</strong></p>
+<p><img alt="Claude Code" src="https://img.shields.io/badge/-Claude%20Code-D97757?style=flat-square&amp;logo=anthropic&amp;logoColor=white" /> <img alt="Ollama" src="https://img.shields.io/badge/-Ollama-000000?style=flat-square&amp;logo=ollama&amp;logoColor=white" /> <img alt="Gemini" src="https://img.shields.io/badge/-Gemini%20API-4285F4?style=flat-square&amp;logo=googlegemini&amp;logoColor=white" /> <img alt="n8n" src="https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&amp;logo=n8n&amp;logoColor=white" /></p>
+<p><strong>ML Frameworks:</strong></p>
+<p><img alt="PyTorch" src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&amp;logo=pytorch&amp;logoColor=white" /> <img alt="TensorFlow" src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&amp;logo=tensorflow&amp;logoColor=white" /> <img alt="Scikit-Learn" src="https://img.shields.io/badge/-Scikit--Learn-F7931E?style=flat-square&amp;logo=scikitlearn&amp;logoColor=white" /> <img alt="Azure ML" src="https://img.shields.io/badge/-Azure%20ML-0078D4?style=flat-square&amp;logo=microsoftazure&amp;logoColor=white" /></p>
+<p><strong>Data &amp; Infrastructure:</strong></p>
+<p><img alt="Oracle" src="https://img.shields.io/badge/-Oracle-F80000?style=flat-square&amp;logo=oracle&amp;logoColor=white" /> <img alt="PostgreSQL" src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&amp;logo=postgresql&amp;logoColor=white" /> <img alt="MongoDB" src="https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&amp;logo=mongodb&amp;logoColor=white" /> <img alt="Power BI" src="https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&amp;logo=powerbi&amp;logoColor=black" /> <img alt="Docker" src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&amp;logo=docker&amp;logoColor=white" /> <img alt="AWS" src="https://img.shields.io/badge/-AWS-232F3E?style=flat-square&amp;logo=amazonaws&amp;logoColor=white" /> <img alt="Azure" src="https://img.shields.io/badge/-Azure-0078D4?style=flat-square&amp;logo=microsoftazure&amp;logoColor=white" /></p>
+<h2>🔔 My Latest GitHub Metrics</h2>
+<p><img alt="Metrics" src="https://metrics.lecoq.io/Asorky?template=classic&amp;base.indepth=true&amp;repositories.forks=true&amp;languages=1&amp;stargazers=1&amp;stars=1&amp;people=1&amp;notable=1&amp;traffic=1&amp;gists=1&amp;base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&amp;base.indepth=true&amp;base.hireable=false&amp;base.skip=false&amp;languages=false&amp;languages.limit=8&amp;languages.threshold=0%25&amp;languages.other=true&amp;languages.colors=github&amp;languages.sections=most-used&amp;languages.indepth=true&amp;languages.analysis.timeout=15&amp;languages.analysis.timeout.repositories=7.5&amp;languages.categories=markup%2C%20programming&amp;languages.recent.categories=markup%2C%20programming&amp;languages.recent.load=300&amp;languages.recent.days=14&amp;stargazers=false&amp;stargazers.days=14&amp;stargazers.charts=true&amp;stargazers.charts.type=classic&amp;stargazers.worldmap=false&amp;stargazers.worldmap.sample=0&amp;stars=false&amp;stars.limit=4&amp;people=false&amp;people.limit=24&amp;people.identicons=false&amp;people.identicons.hide=false&amp;people.size=28&amp;people.types=followers%2C%20following&amp;people.shuffle=false&amp;notable=false&amp;notable.from=organization&amp;notable.repositories=false&amp;notable.indepth=false&amp;notable.types=commit&amp;notable.self=false&amp;traffic=false&amp;gists=false&amp;config.timezone=Europe%2FMadrid" /></p>
+<h2>🔔 My Latest GitHub Activity</h2>
+<!--START_SECTION:activity-->
+<!-- This section auto-fills once you add the jamesgeorge007/github-activity-readme Action below -->
+<!--END_SECTION:activity-->
+
+<h2>📫 How to reach me</h2>
+<p>You can reach me at the email in my GitHub profile, or on LinkedIn.</p>
+<p><a href="https://linkedin.com/in/REPLACE_ME"><img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/linkedin.svg" height="32em" align="center" alt="LinkedIn" title="Follow Asorky on LinkedIn"/></a>
+<a href="https://github.com/Asorky"><img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/github.svg" height="32em" align="center" alt="GitHub" title="Asorky on GitHub"/></a></p>
+<h2>⚡ Credits / things used in this profile README</h2>
+<ul>
+<li>Animated network header generated with Python (PIL/numpy/imageio)</li>
+<li>Visitor count from <a href="https://vbr.nathanchung.dev/">NathanChung/vercel-badge-reloaded</a></li>
+<li>GitHub activity feed via <a href="https://github.com/jamesgeorge007/github-activity-readme">jamesgeorge007/github-activity-readme</a></li>
+<li>GitHub Metrics via <a href="https://github.com/lowlighter/metrics">lowlighter/metrics</a></li>
+<li>Tech badges via <a href="https://shields.io">shields.io</a></li>
+</ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
