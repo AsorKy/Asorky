@@ -61,16 +61,14 @@ let headerFrames = (0..<12).map { frame -> CGImage in
         ])
         let titleOrigin = NSPoint(x: (1200 - title.size().width) / 2, y: 235)
         let subtitleOrigin = NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170)
-        NSColor.black.setFill()
+        NSColor(calibratedWhite: 0, alpha: 0.6).setFill()
         NSBezierPath(roundedRect: NSRect(x: 330, y: 142, width: 540, height: 188),
                      xRadius: 24, yRadius: 24).fill()
         title.draw(at: titleOrigin)
         subtitle.draw(at: subtitleOrigin)
-        NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.64).setFill()
-        NSBezierPath(roundedRect: NSRect(x: 515, y: 148, width: 170, height: 3), xRadius: 2, yRadius: 2).fill()
     }
 }
-writeGIF(headerFrames, to: root.appendingPathComponent("assets/asorky_header_v3.gif").path, delay: 0.12)
+writeGIF(headerFrames, to: root.appendingPathComponent("assets/asorky_header_v4.gif").path, delay: 0.12)
 
 let framesPerTopic = 40
 let topicFont = NSFont(name: "Avenir Next Demi Bold", size: 36)!
