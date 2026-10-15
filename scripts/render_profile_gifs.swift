@@ -5,10 +5,10 @@ import UniformTypeIdentifiers
 let displayName = "Asorky"
 let profession = "AI Engineer / Network Scientist"
 let topics = [
-    "AGENTIC SYSTEMS & RAG",
-    "AI AUTOMATIONS",
-    "NETWORK SCIENCE",
-    "DATA MODELING & ANALYTICS"
+    "Agentic Systems and RAG",
+    "AI Automations",
+    "Network Science",
+    "Data Modeling and Analytics"
 ]
 
 func render(width: Int, height: Int, drawContent: () -> Void) -> CGImage {
@@ -41,55 +41,49 @@ func writeGIF(_ images: [CGImage], to path: String, delay: Double) {
 let root = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent().deletingLastPathComponent()
 let source = NSImage(contentsOf: root.appendingPathComponent("assets/img3.jpg"))!
 let headerFrames = (0..<12).map { frame -> CGImage in
-    render(width: 1200, height: 300) {
-        source.draw(in: NSRect(x: 0, y: 0, width: 1200, height: 300), from: .zero,
+    render(width: 1200, height: 450) {
+        source.draw(in: NSRect(x: 0, y: 0, width: 1200, height: 450), from: .zero,
                     operation: .sourceOver, fraction: 1)
-        NSColor(calibratedWhite: 0.02, alpha: 0.47).setFill()
-        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 300)).fill()
         let pulse = 0.92 + 0.08 * sin(Double(frame) * .pi / 6)
+        let textShadow = NSShadow()
+        textShadow.shadowColor = NSColor(calibratedWhite: 0, alpha: 0.9)
+        textShadow.shadowBlurRadius = 5
+        textShadow.shadowOffset = NSSize(width: 0, height: -2)
         let title = NSAttributedString(string: displayName, attributes: [
             .font: NSFont(name: "Avenir Next Demi Bold", size: 66)!,
-            .foregroundColor: NSColor(calibratedRed: 0.43, green: 0.91, blue: 0.97, alpha: pulse)
+            .foregroundColor: NSColor(calibratedRed: 0.43, green: 0.91, blue: 0.97, alpha: pulse),
+            .shadow: textShadow
         ])
         let subtitle = NSAttributedString(string: profession, attributes: [
-            .font: NSFont(name: "Avenir Next Medium", size: 26)!,
-            .foregroundColor: NSColor.white
+            .font: NSFont(name: "Avenir Next Medium", size: 30)!,
+            .foregroundColor: NSColor.white,
+            .shadow: textShadow
         ])
-        title.draw(at: NSPoint(x: (1200 - title.size().width) / 2, y: 150))
-        subtitle.draw(at: NSPoint(x: (1200 - subtitle.size().width) / 2, y: 102))
+        title.draw(at: NSPoint(x: (1200 - title.size().width) / 2, y: 235))
+        subtitle.draw(at: NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170))
         NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.8).setFill()
-        NSBezierPath(roundedRect: NSRect(x: 515, y: 82, width: 170, height: 3), xRadius: 2, yRadius: 2).fill()
+        NSBezierPath(roundedRect: NSRect(x: 515, y: 148, width: 170, height: 3), xRadius: 2, yRadius: 2).fill()
     }
 }
 writeGIF(headerFrames, to: root.appendingPathComponent("assets/asorky_header.gif").path, delay: 0.12)
 
-let topicFrames = (0..<24).map { frame -> CGImage in
-    render(width: 900, height: 92) {
-        NSColor(calibratedRed: 0.025, green: 0.10, blue: 0.15, alpha: 1).setFill()
-        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 900, height: 92)).fill()
-        NSColor(calibratedRed: 0.08, green: 0.31, blue: 0.37, alpha: 1).setStroke()
-        let border = NSBezierPath(roundedRect: NSRect(x: 1, y: 1, width: 898, height: 90), xRadius: 14, yRadius: 14)
-        border.lineWidth = 2
-        border.stroke()
-        for index in 0..<4 {
-            let active = index == (frame / 6) % 4
-            let label = NSAttributedString(string: topics[index], attributes: [
-                .font: NSFont(name: active ? "Avenir Next Demi Bold" : "Avenir Next Medium", size: active ? 16 : 14)!,
-                .foregroundColor: active
-                    ? NSColor(calibratedRed: 0.45, green: 0.91, blue: 0.96, alpha: 1)
-                    : NSColor(calibratedWhite: 0.88, alpha: 0.8)
-            ])
-            let cellWidth = 225.0
-            label.draw(at: NSPoint(x: Double(index) * cellWidth + (cellWidth - label.size().width) / 2, y: 39))
-            if index < 3 {
-                NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.55).setFill()
-                NSBezierPath(ovalIn: NSRect(x: Double(index + 1) * cellWidth - 2, y: 43, width: 4, height: 4)).fill()
-            }
-        }
-        let activeIndex = (frame / 6) % 4
-        NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.9).setFill()
-        NSBezierPath(roundedRect: NSRect(x: Double(activeIndex) * 225 + 80, y: 20,
-                                         width: 65, height: 2), xRadius: 1, yRadius: 1).fill()
+let framesPerTopic = 40
+let topicFrames = (0..<(topics.count * framesPerTopic)).map { frame -> CGImage in
+    let topicIndex = frame / framesPerTopic
+    let frameInTopic = frame % framesPerTopic
+    let topic = topics[topicIndex]
+    let typedText = String(topic.prefix(min(topic.count, frameInTopic)))
+    let cursor = frameInTopic % 2 == 0 ? "▍" : " "
+    return render(width: 1200, height: 112) {
+        NSColor(calibratedWhite: 0.025, alpha: 1).setFill()
+        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 112)).fill()
+        let label = NSAttributedString(string: typedText + cursor, attributes: [
+            .font: NSFont(name: "Avenir Next Demi Bold", size: 36)!,
+            .foregroundColor: NSColor.white
+        ])
+        label.draw(at: NSPoint(x: (1200 - label.size().width) / 2, y: 39))
+        NSColor(calibratedRed: 0.20, green: 0.78, blue: 0.82, alpha: 1).setFill()
+        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 3)).fill()
     }
 }
-writeGIF(topicFrames, to: root.appendingPathComponent("assets/profile_topics.gif").path, delay: 0.16)
+writeGIF(topicFrames, to: root.appendingPathComponent("assets/profile_topics.gif").path, delay: 0.08)

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/profile_topics.gif" alt="Agentic Systems and RAG Pipelines · AI Automations · Network Science · Data Modeling and Analytics" width="78%"/>
+  <img src="./assets/profile_topics.gif" alt="Typewriter animation: Agentic Systems and RAG, AI Automations, Network Science, Data Modeling and Analytics" width="100%"/>
 </p>
 
 <p align="center">
