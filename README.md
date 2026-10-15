@@ -24,48 +24,43 @@
 **Asorky/Asorky** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 -->
 
-## :book: About Me
+## About Me
 - 🖥 AI Engineer and physicist — production-oriented LLM systems, RAG, and agentic AI
 - 🎓 Master's in AI from Universidad de los Andes · 5 years of experience in data science and analytics
 - 🧪 Background in Complex Network Science for system modeling, and in designing knowledge ontologies
 - 🏫 Designer and instructor of university-level AI and data science courses
-- 🎧 btw I also DJ — *"DJ y coder"*
 
-## ⬆ What I'm up to
-- 🔨 I'm currently...
-```yaml
-- Conversational Data Access: SQL and Slack Bots 
-- Building agentic AI systems and RAG pipelines (document intelligence: OCR + LLM extraction)
-- Local-First Agentic Workflow Ecosystem 
-- CRM and Operations Platforms
-- Looking for fun Complex Networks and AI applications... 
-```
-- 🌱 I'm currently learning...
-  - Agentic AI patterns and Model Context Protocol (MCP) in depth
-- 👯 I'm looking to collaborate on...
-  - RAG / document intelligence tooling, agentic systems, MCP servers
-  - Algorithmic trading
-  - Complex Network and GNN modeling
-  - AI applications to music!
-- 💬 Ask me about...
-  - LLM applications, RAG, agents, MCP, data pipelines, Complex Networks
-- 😄 Pronouns: he/him
+## Tech Stack
 
-## 🛠️ Tech Stack
+**AI / LLM**
 
-**Languages:** Python · SQL · DAX
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white) ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black) ![Ollama](https://img.shields.io/badge/Ollama-111111?style=flat-square&logo=ollama&logoColor=white) ![ChromaDB](https://img.shields.io/badge/ChromaDB-5B42F3?style=flat-square&logo=chroma&logoColor=white) ![Gemini API](https://img.shields.io/badge/Gemini%20API-4285F4?style=flat-square&logo=googlegemini&logoColor=white) ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 
-**LLM & Agent Stack:**
+**Backend & Data**
 
-![Claude Code](https://img.shields.io/badge/-Claude%20Code-D97757?style=flat-square&logo=anthropic&logoColor=white) ![Ollama](https://img.shields.io/badge/-Ollama-000000?style=flat-square&logo=ollama&logoColor=white) ![Gemini](https://img.shields.io/badge/-Gemini%20API-4285F4?style=flat-square&logo=googlegemini&logoColor=white) ![n8n](https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=databricks&logoColor=white)
 
-**ML Frameworks:**
+**Reporting**
 
-![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/-Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) ![Azure ML](https://img.shields.io/badge/-Azure%20ML-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) ![DAX](https://img.shields.io/badge/DAX-F2C811?style=flat-square&logo=powerbi&logoColor=black)
 
-**Data & Infrastructure:**
+**Cloud & DevOps**
 
-![Oracle](https://img.shields.io/badge/-Oracle-F80000?style=flat-square&logo=oracle&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white) ![Azure](https://img.shields.io/badge/-Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![AWS ECS](https://img.shields.io/badge/AWS%20ECS-232F3E?style=flat-square&logo=amazonaws&logoColor=white) ![Azure ML](https://img.shields.io/badge/Azure%20ML-0078D4?style=flat-square&logo=microsoftazure&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+
+**Agentic Stack**
+
+![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=flat-square&logo=anthropic&logoColor=white) ![Codex](https://img.shields.io/badge/Codex-000000?style=flat-square&logo=openai&logoColor=white) ![Antigravity](https://img.shields.io/badge/Antigravity-4285F4?style=flat-square&logo=google&logoColor=white)
+
+## What I'm Up To
+- Building conversational data access tools, including SQL and Slack bots
+- Developing agentic AI systems and RAG pipelines for document intelligence (OCR and LLM extraction)
+- Building a local-first agentic workflow ecosystem and CRM/operations platforms
+- Exploring applications of complex networks and AI
+- Learning agentic AI patterns and the Model Context Protocol (MCP)
+- Open to collaboration on RAG, document intelligence, agentic systems, MCP servers, algorithmic trading, complex networks, GNNs, and AI for music
+- Ask me about LLM applications, RAG, agents, MCP, data pipelines, and complex networks
+- Pronouns: he/him
 
 ## 🔔 My Latest GitHub Metrics
 ![Metrics](https://metrics.lecoq.io/Asorky?template=classic&base.indepth=true&repositories.forks=true&languages=1&stargazers=1&stars=1&people=1&notable=1&traffic=1&gists=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=false&base.skip=false&languages=false&languages.limit=8&languages.threshold=0%25&languages.other=true&languages.colors=github&languages.sections=most-used&languages.indepth=true&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&stargazers=false&stargazers.days=14&stargazers.charts=true&stargazers.charts.type=classic&stargazers.worldmap=false&stargazers.worldmap.sample=0&stars=false&stars.limit=4&people=false&people.limit=24&people.identicons=false&people.identicons.hide=false&people.size=28&people.types=followers%2C%20following&people.shuffle=false&notable=false&notable.from=organization&notable.repositories=false&notable.indepth=false&notable.types=commit&notable.self=false&traffic=false&gists=false&config.timezone=Europe%2FMadrid)
