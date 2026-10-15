@@ -44,9 +44,8 @@ let headerFrames = (0..<12).map { frame -> CGImage in
     render(width: 1200, height: 450) {
         source.draw(in: NSRect(x: 0, y: 0, width: 1200, height: 450), from: .zero,
                     operation: .sourceOver, fraction: 1)
-        NSColor(calibratedWhite: 0, alpha: 0.35).setFill()
-        NSBezierPath(roundedRect: NSRect(x: 0, y: 128, width: 1200, height: 210),
-                     xRadius: 70, yRadius: 70).fill()
+        NSColor(calibratedWhite: 0, alpha: 0.65).setFill()
+        NSBezierPath(rect: NSRect(x: 0, y: 128, width: 1200, height: 210)).fill()
         let pulse = 0.92 + 0.08 * sin(Double(frame) * .pi / 6)
         let textShadow = NSShadow()
         textShadow.shadowColor = NSColor(calibratedWhite: 0, alpha: 0.9)
