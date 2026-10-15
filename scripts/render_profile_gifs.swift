@@ -39,7 +39,7 @@ func writeGIF(_ images: [CGImage], to path: String, delay: Double) {
 }
 
 let root = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent().deletingLastPathComponent()
-let source = NSImage(contentsOf: root.appendingPathComponent("assets/img3.jpg"))!
+let source = NSImage(contentsOf: root.appendingPathComponent("assets/img2.jpg"))!
 let headerFrames = (0..<12).map { frame -> CGImage in
     render(width: 1200, height: 450) {
         source.draw(in: NSRect(x: 0, y: 0, width: 1200, height: 450), from: .zero,
