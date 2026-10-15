@@ -11,6 +11,9 @@
   <a href="https://www.linkedin.com/in/nicolas-castillo-ak"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="mailto:YOUR-EMAIL-ADDRESS"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
+<p align="center">
+  <img src="./assets/accent_line.svg" alt="" width="100%"/>
+</p>
 <!-- Update the Portfolio URL and replace YOUR-EMAIL-ADDRESS with the address you want to publish. -->
 
 <p align="center">

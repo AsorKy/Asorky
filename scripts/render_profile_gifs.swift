@@ -44,6 +44,9 @@ let headerFrames = (0..<12).map { frame -> CGImage in
     render(width: 1200, height: 450) {
         source.draw(in: NSRect(x: 0, y: 0, width: 1200, height: 450), from: .zero,
                     operation: .sourceOver, fraction: 1)
+        NSColor(calibratedRed: 0.06, green: 0.25, blue: 0.29, alpha: 0.15).setFill()
+        NSBezierPath(roundedRect: NSRect(x: 160, y: 128, width: 880, height: 210),
+                     xRadius: 70, yRadius: 70).fill()
         let pulse = 0.92 + 0.08 * sin(Double(frame) * .pi / 6)
         let textShadow = NSShadow()
         textShadow.shadowColor = NSColor(calibratedWhite: 0, alpha: 0.9)
@@ -61,7 +64,7 @@ let headerFrames = (0..<12).map { frame -> CGImage in
         ])
         let titleOrigin = NSPoint(x: (1200 - title.size().width) / 2, y: 235)
         let subtitleOrigin = NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170)
-        NSColor(calibratedRed: 0.015, green: 0.20, blue: 0.24, alpha: 0.82).setFill()
+        NSColor(calibratedRed: 0.015, green: 0.24, blue: 0.29, alpha: 0.93).setFill()
         NSBezierPath(roundedRect: NSRect(x: titleOrigin.x - 30, y: 224,
                                          width: title.size().width + 60, height: 91),
                      xRadius: 16, yRadius: 16).fill()
@@ -78,16 +81,14 @@ writeGIF(headerFrames, to: root.appendingPathComponent("assets/asorky_header.gif
 
 let framesPerTopic = 40
 let topicFont = NSFont(name: "Avenir Next Demi Bold", size: 36)!
-let widestTopic = topics.map {
-    NSAttributedString(string: $0, attributes: [.font: topicFont]).size().width
-}.max()!
-let typingOriginX = (1200 - widestTopic) / 2
 let topicFrames = (0..<(topics.count * framesPerTopic)).map { frame -> CGImage in
     let topicIndex = frame / framesPerTopic
     let frameInTopic = frame % framesPerTopic
     let topic = topics[topicIndex]
     let typedText = String(topic.prefix(min(topic.count, frameInTopic)))
     let cursor = frameInTopic % 2 == 0 ? "▍" : " "
+    let topicWidth = NSAttributedString(string: topic, attributes: [.font: topicFont]).size().width
+    let typingOriginX = (1200 - topicWidth) / 2
     return render(width: 1200, height: 112) {
         NSColor(calibratedWhite: 0.025, alpha: 1).setFill()
         NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 112)).fill()
