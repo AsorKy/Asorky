@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AsorKy/Asorky/main/assets/asorky_header_v2.gif" alt="Asorky — AI Engineer / Network Scientist" width="100%"/>
+  <img src="https://raw.githubusercontent.com/AsorKy/Asorky/main/assets/asorky_header_v3.gif" alt="Nicolas Ojeda — AI Engineer / Network Scientist" width="100%"/>
 </p>
 
 <p align="center">

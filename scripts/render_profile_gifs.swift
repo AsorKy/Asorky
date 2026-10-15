@@ -70,7 +70,7 @@ let headerFrames = (0..<12).map { frame -> CGImage in
         NSBezierPath(roundedRect: NSRect(x: 515, y: 148, width: 170, height: 3), xRadius: 2, yRadius: 2).fill()
     }
 }
-writeGIF(headerFrames, to: root.appendingPathComponent("assets/asorky_header_v2.gif").path, delay: 0.12)
+writeGIF(headerFrames, to: root.appendingPathComponent("assets/asorky_header_v3.gif").path, delay: 0.12)
 
 let framesPerTopic = 40
 let topicFont = NSFont(name: "Avenir Next Demi Bold", size: 36)!
