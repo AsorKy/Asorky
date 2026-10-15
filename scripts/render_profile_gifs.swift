@@ -62,7 +62,8 @@ let headerFrames = (0..<12).map { frame -> CGImage in
         let titleOrigin = NSPoint(x: (1200 - title.size().width) / 2, y: 235)
         let subtitleOrigin = NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170)
         NSColor.black.setFill()
-        NSBezierPath(rect: NSRect(x: 330, y: 142, width: 540, height: 188)).fill()
+        NSBezierPath(roundedRect: NSRect(x: 330, y: 142, width: 540, height: 188),
+                     xRadius: 8, yRadius: 8).fill()
         title.draw(at: titleOrigin)
         subtitle.draw(at: subtitleOrigin)
         NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.64).setFill()
