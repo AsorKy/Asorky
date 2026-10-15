@@ -1,8 +1,22 @@
-[<img src="./assets/network_header.gif" alt="👋 Hi there! I'm Asorky" title="👋 Hi there! I'm Asorky"/>](https://github.com/Asorky)
+<p align="center">
+  <img src="./assets/asorky_header.gif" alt="Asorky — AI Engineer / Network Scientist" width="100%"/>
+</p>
 
-<img src="./assets/img3.jpg" alt="Network-themed gallery paintings" width="100%"/>
+<p align="center">
+  <img src="./assets/profile_topics.gif" alt="Agentic Systems and RAG Pipelines · AI Automations · Network Science · Data Modeling and Analytics" width="78%"/>
+</p>
 
-![visitors](https://vbr.nathanchung.dev/badge?page_id=Asorky.Asorky&color=00cf00)
+<p align="center">
+  <a href="https://github.com/Asorky?tab=repositories"><img src="https://img.shields.io/badge/Portfolio-Explore-0A7EA4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://www.linkedin.com/in/nicolas-castillo-ak"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="mailto:YOUR-EMAIL-ADDRESS"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+</p>
+<!-- Update the Portfolio URL and replace YOUR-EMAIL-ADDRESS with the address you want to publish. -->
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Asorky&label=Profile%20views&color=0A7EA4&style=flat" alt="Profile views"/>
+  <img src="https://img.shields.io/github/followers/Asorky?label=Followers&style=flat&color=0A7EA4" alt="GitHub followers"/>
+</p>
 
 *Last manually updated:* `2026-10-13` <!-- TODO: automate this -->
 
@@ -60,9 +74,3 @@
 <!--START_SECTION:activity-->
 <!-- This section auto-fills once you add the jamesgeorge007/github-activity-readme Action below -->
 <!--END_SECTION:activity-->
-
-## 📫 How to reach me
-You can reach me at the email in my GitHub profile, or on LinkedIn.
-
-[<img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/linkedin.svg" height="32em" align="center" alt="LinkedIn" title="Follow Asorky on LinkedIn"/>](www.linkedin.com/in/nicolas-castillo-ak)
-[<img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/github.svg" height="32em" align="center" alt="GitHub" title="Asorky on GitHub"/>](https://github.com/AsorKy)
