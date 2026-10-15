@@ -59,8 +59,17 @@ let headerFrames = (0..<12).map { frame -> CGImage in
             .foregroundColor: NSColor.white,
             .shadow: textShadow
         ])
-        title.draw(at: NSPoint(x: (1200 - title.size().width) / 2, y: 235))
-        subtitle.draw(at: NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170))
+        let titleOrigin = NSPoint(x: (1200 - title.size().width) / 2, y: 235)
+        let subtitleOrigin = NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170)
+        NSColor(calibratedRed: 0.015, green: 0.20, blue: 0.24, alpha: 0.82).setFill()
+        NSBezierPath(roundedRect: NSRect(x: titleOrigin.x - 30, y: 224,
+                                         width: title.size().width + 60, height: 91),
+                     xRadius: 16, yRadius: 16).fill()
+        NSBezierPath(roundedRect: NSRect(x: subtitleOrigin.x - 24, y: 163,
+                                         width: subtitle.size().width + 48, height: 52),
+                     xRadius: 12, yRadius: 12).fill()
+        title.draw(at: titleOrigin)
+        subtitle.draw(at: subtitleOrigin)
         NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.8).setFill()
         NSBezierPath(roundedRect: NSRect(x: 515, y: 148, width: 170, height: 3), xRadius: 2, yRadius: 2).fill()
     }
@@ -68,6 +77,11 @@ let headerFrames = (0..<12).map { frame -> CGImage in
 writeGIF(headerFrames, to: root.appendingPathComponent("assets/asorky_header.gif").path, delay: 0.12)
 
 let framesPerTopic = 40
+let topicFont = NSFont(name: "Avenir Next Demi Bold", size: 36)!
+let widestTopic = topics.map {
+    NSAttributedString(string: $0, attributes: [.font: topicFont]).size().width
+}.max()!
+let typingOriginX = (1200 - widestTopic) / 2
 let topicFrames = (0..<(topics.count * framesPerTopic)).map { frame -> CGImage in
     let topicIndex = frame / framesPerTopic
     let frameInTopic = frame % framesPerTopic
@@ -78,10 +92,10 @@ let topicFrames = (0..<(topics.count * framesPerTopic)).map { frame -> CGImage i
         NSColor(calibratedWhite: 0.025, alpha: 1).setFill()
         NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 112)).fill()
         let label = NSAttributedString(string: typedText + cursor, attributes: [
-            .font: NSFont(name: "Avenir Next Demi Bold", size: 36)!,
+            .font: topicFont,
             .foregroundColor: NSColor.white
         ])
-        label.draw(at: NSPoint(x: (1200 - label.size().width) / 2, y: 39))
+        label.draw(at: NSPoint(x: typingOriginX, y: 39))
         NSColor(calibratedRed: 0.20, green: 0.78, blue: 0.82, alpha: 1).setFill()
         NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 3)).fill()
     }
