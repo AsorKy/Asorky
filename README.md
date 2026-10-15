@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/asorky_header.gif" alt="Asorky — AI Engineer / Network Scientist" width="100%"/>
+  <img src="https://raw.githubusercontent.com/AsorKy/Asorky/main/assets/asorky_header.gif?v=img2-black-panel" alt="Asorky — AI Engineer / Network Scientist" width="100%"/>
 </p>
 
 <p align="center">
