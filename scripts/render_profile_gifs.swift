@@ -44,9 +44,6 @@ let headerFrames = (0..<12).map { frame -> CGImage in
     render(width: 1200, height: 450) {
         source.draw(in: NSRect(x: 0, y: 0, width: 1200, height: 450), from: .zero,
                     operation: .sourceOver, fraction: 1)
-        NSColor(calibratedWhite: 0, alpha: 0.65).setFill()
-        NSBezierPath(roundedRect: NSRect(x: -110, y: 128, width: 1420, height: 210),
-                     xRadius: 105, yRadius: 105).fill()
         let pulse = 0.92 + 0.08 * sin(Double(frame) * .pi / 6)
         let textShadow = NSShadow()
         textShadow.shadowColor = NSColor(calibratedWhite: 0, alpha: 0.9)
@@ -64,13 +61,8 @@ let headerFrames = (0..<12).map { frame -> CGImage in
         ])
         let titleOrigin = NSPoint(x: (1200 - title.size().width) / 2, y: 235)
         let subtitleOrigin = NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170)
-        NSColor(calibratedWhite: 0, alpha: 0.5).setFill()
-        NSBezierPath(roundedRect: NSRect(x: titleOrigin.x - 30, y: 224,
-                                         width: title.size().width + 60, height: 91),
-                     xRadius: 16, yRadius: 16).fill()
-        NSBezierPath(roundedRect: NSRect(x: subtitleOrigin.x - 24, y: 163,
-                                         width: subtitle.size().width + 48, height: 52),
-                     xRadius: 12, yRadius: 12).fill()
+        NSColor.black.setFill()
+        NSBezierPath(rect: NSRect(x: 330, y: 142, width: 540, height: 188)).fill()
         title.draw(at: titleOrigin)
         subtitle.draw(at: subtitleOrigin)
         NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.64).setFill()
