@@ -2,7 +2,7 @@ import AppKit
 import ImageIO
 import UniformTypeIdentifiers
 
-let displayName = "Asorky"
+let displayName = "Nicolas Ojeda"
 let profession = "AI Engineer / Network Scientist"
 let topics = [
     "Agentic Systems and RAG",
