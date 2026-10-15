@@ -54,7 +54,7 @@ let headerFrames = (0..<12).map { frame -> CGImage in
         textShadow.shadowOffset = NSSize(width: 0, height: -2)
         let title = NSAttributedString(string: displayName, attributes: [
             .font: NSFont(name: "Avenir Next Demi Bold", size: 66)!,
-            .foregroundColor: NSColor(calibratedRed: 0.43, green: 0.91, blue: 0.97, alpha: pulse),
+            .foregroundColor: NSColor(calibratedWhite: 1, alpha: pulse),
             .shadow: textShadow
         ])
         let subtitle = NSAttributedString(string: profession, attributes: [
@@ -64,7 +64,7 @@ let headerFrames = (0..<12).map { frame -> CGImage in
         ])
         let titleOrigin = NSPoint(x: (1200 - title.size().width) / 2, y: 235)
         let subtitleOrigin = NSPoint(x: (1200 - subtitle.size().width) / 2, y: 170)
-        NSColor(calibratedRed: 0.015, green: 0.24, blue: 0.29, alpha: 0.93).setFill()
+        NSColor(calibratedRed: 0.015, green: 0.24, blue: 0.29, alpha: 1).setFill()
         NSBezierPath(roundedRect: NSRect(x: titleOrigin.x - 30, y: 224,
                                          width: title.size().width + 60, height: 91),
                      xRadius: 16, yRadius: 16).fill()
@@ -73,7 +73,7 @@ let headerFrames = (0..<12).map { frame -> CGImage in
                      xRadius: 12, yRadius: 12).fill()
         title.draw(at: titleOrigin)
         subtitle.draw(at: subtitleOrigin)
-        NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.8).setFill()
+        NSColor(calibratedRed: 0.14, green: 0.80, blue: 0.87, alpha: 0.64).setFill()
         NSBezierPath(roundedRect: NSRect(x: 515, y: 148, width: 170, height: 3), xRadius: 2, yRadius: 2).fill()
     }
 }
@@ -87,8 +87,8 @@ let topicFrames = (0..<(topics.count * framesPerTopic)).map { frame -> CGImage i
     let topic = topics[topicIndex]
     let typedText = String(topic.prefix(min(topic.count, frameInTopic)))
     let cursor = frameInTopic % 2 == 0 ? "▍" : " "
-    let topicWidth = NSAttributedString(string: topic, attributes: [.font: topicFont]).size().width
-    let typingOriginX = (1200 - topicWidth) / 2
+    let topicWidth = (topic as NSString).size(withAttributes: [.font: topicFont]).width
+    let typingOriginX = ((CGFloat(1200) - topicWidth) / 2).rounded(.down)
     return render(width: 1200, height: 112) {
         NSColor(calibratedWhite: 0.025, alpha: 1).setFill()
         NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 112)).fill()
@@ -97,8 +97,6 @@ let topicFrames = (0..<(topics.count * framesPerTopic)).map { frame -> CGImage i
             .foregroundColor: NSColor.white
         ])
         label.draw(at: NSPoint(x: typingOriginX, y: 39))
-        NSColor(calibratedRed: 0.20, green: 0.78, blue: 0.82, alpha: 1).setFill()
-        NSBezierPath(rect: NSRect(x: 0, y: 0, width: 1200, height: 3)).fill()
     }
 }
 writeGIF(topicFrames, to: root.appendingPathComponent("assets/profile_topics.gif").path, delay: 0.08)
